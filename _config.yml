@@ -1,0 +1,14 @@
+# GitHub Pages Jekyll config
+title: UniQampus
+description: Üniversite kampüsünün dijital arkadaşı
+theme: jekyll-theme-cayman
+url: "https://uniqampus.github.io"
+baseurl: "/uniqampus-legal"
+
+# Repo'da gözükecek ama sunulmayacak dosyalar
+exclude:
+  - README.md
+  - "*.txt"
+
+# Kullanıcı dostu URL'ler
+permalink: /:title/
