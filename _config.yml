@@ -1,0 +1,23 @@
+# UniQampüs — Jekyll / GitHub Pages yapılandırması
+title: UniQampüs
+description: Kampüsün dijital meydanı — üniversite hayatının tek uygulaması.
+url: https://uniqampus.org
+# Custom domain (CNAME=uniqampus.org) → baseurl BOŞ olmalı. Eski "/uniqampus-legal"
+# kaldırıldı; yoksa tüm linkler /uniqampus-legal/... altına kayıp 404 olur.
+baseurl: ""
+lang: tr
+
+# Jekyll '.' ile başlayan klasörleri yok sayar → AASA/assetlinks yayınlansın diye şart:
+include:
+  - .well-known
+
+# Siteye konmayacak iç dosyalar:
+exclude:
+  - README.md
+  - legal/MAGAZA-VERI-FORMLARI.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Kendi layout'larımız var — harici tema kullanmıyoruz (kendi kendine yeter).
+plugins: []
