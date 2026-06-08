@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>UniQampüs — Ulaşım İlanı</title>
+  <meta name="robots" content="noindex" />
+  <!-- Sosyal önizleme -->
+  <meta property="og:title" content="UniQampüs Ulaşım İlanı" />
+  <meta property="og:description" content="Kampüs ulaşım paylaşımı. Uygulamayı aç ya da indir, ilanı gör." />
+  <meta name="theme-color" content="#DC2626" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <style>
+    :root { --red:#DC2626; --ink:#111827; --muted:#6B7280; --bg:#FFF7F5; --card:#FFFFFF; --border:#F0D9D5; }
+    * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    html,body { margin:0; height:100%; }
+    body {
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:linear-gradient(160deg,#FFF7F5 0%,#FDECEA 100%);
+      color:var(--ink); display:flex; align-items:center; justify-content:center;
+      min-height:100%; padding:24px;
+    }
+    .card {
+      width:100%; max-width:380px; background:var(--card); border:1px solid var(--border);
+      border-radius:24px; padding:32px 24px; text-align:center;
+      box-shadow:0 12px 40px rgba(220,38,38,0.10);
+    }
+    .logo {
+      width:72px; height:72px; border-radius:20px; margin:0 auto 18px; display:block;
+      object-fit:cover; background:#fff; box-shadow:0 8px 24px rgba(220,38,38,0.18);
+    }
+    h1 { font-size:21px; font-weight:800; margin:0 0 6px; letter-spacing:-0.3px; }
+    p { font-size:14.5px; line-height:1.5; color:var(--muted); margin:0 0 22px; }
+    .btn {
+      display:block; width:100%; padding:15px 16px; border-radius:14px; font-size:16px;
+      font-weight:700; text-decoration:none; margin-bottom:12px; border:none; cursor:pointer;
+    }
+    .btn-primary { background:var(--red); color:#fff; box-shadow:0 6px 18px rgba(220,38,38,0.30); }
+    .btn-ghost { background:#fff; color:var(--ink); border:1px solid #E5E7EB; }
+    .stores { display:flex; gap:10px; justify-content:center; margin-top:4px; }
+    .stores a { flex:1; }
+    .foot { margin-top:18px; font-size:12px; color:#9CA3AF; }
+    .foot a { color:#9CA3AF; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="/assets/logo.jpg" alt="UniQampüs" />
+    <h1>UniQampüs Ulaşım İlanı</h1>
+    <p>Bu ulaşım ilanını uygulamada görüntüle. Uygulaman varsa açılır; yoksa indirip bakabilirsin.</p>
+
+    <a class="btn btn-primary" id="openApp" href="#">Uygulamada Aç</a>
+    <div class="stores">
+      <a class="btn btn-ghost" id="appStore" href="https://apps.apple.com/app/id6773794797">App Store</a>
+      <a class="btn btn-ghost" id="playStore" href="https://play.google.com/store/apps/details?id=com.uniqampus.app">Google Play</a>
+    </div>
+
+    <div class="foot">
+      <a href="https://uniqampus.org">uniqampus.org</a> · Link açılmıyorsa uygulamayı yukarıdan indir.
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var APP_STORE = "https://apps.apple.com/app/id6773794797";
+      var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.uniqampus.app";
+
+      // URL'den ulaşım ilanı id'sini çıkar:  /transport/<id>
+      var m = location.pathname.match(/\/transport\/([^\/?#]+)/);
+      var id = m ? decodeURIComponent(m[1]) : "";
+
+      var ua = navigator.userAgent || "";
+      var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/(Macintosh)/i.test(ua) && "ontouchend" in document);
+      var isAndroid = /Android/i.test(ua);
+      var store = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : null;
+
+      // "Uygulamada Aç" → custom scheme; kurulu değilse kısa süre sonra mağazaya düş.
+      var scheme = "uniqampus://transport/" + encodeURIComponent(id);
+      var openBtn = document.getElementById("openApp");
+      openBtn.setAttribute("href", scheme);
+      openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var t = setTimeout(function () { if (store) location.href = store; }, 1200);
+        window.addEventListener("pagehide", function () { clearTimeout(t); });
+        location.href = scheme;
+      });
+
+      // Mağaza butonlarını platforma göre öne çıkar.
+      if (isIOS) document.getElementById("playStore").style.display = "none";
+      if (isAndroid) document.getElementById("appStore").style.display = "none";
+
+      // Mobilde universal link app'i açmadıysa (kurulu değil) kısa gecikmeyle mağazaya yönlendir.
+      if (store && id) {
+        setTimeout(function () { location.href = store; }, 2500);
+      }
+    })();
+  </script>
+</body>
+</html>
