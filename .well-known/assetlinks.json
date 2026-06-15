@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.uniqampus.app",
       "sha256_cert_fingerprints": [
-        "EA:65:CC:A1:98:5B:87:79:D1:AB:9A:EB:34:57:43:18:C0:7B:5D:3C:79:FB:06:36:56:B8:AB:AF:AD:F7:C6:45"
+        "EA:65:CC:A1:98:5B:87:79:D1:AB:9A:EB:34:57:43:18:C0:7B:5D:3C:79:FB:06:36:56:B8:AB:AF:AD:F7:C6:45",
+        "5A:7B:01:41:EF:00:03:F8:97:4A:15:8A:58:C5:0F:10:9A:74:F7:AB:D5:97:72:6D:64:97:3D:58:7E:91:69:2C"
       ]
     }
   }
