@@ -54,22 +54,28 @@
       var APP_STORE = "https://apps.apple.com/app/id6773794797";
       var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.uniqampus.app";
 
-      // GitHub Pages /r/* wildcard desteklemez → bu 404 sayfası davet linkini yakalar.
-      var m = location.pathname.match(/^\/r\/([^\/?#]+)/);
-      if (!m) return; // /r/ değilse normal 404 göster.
+      // GitHub Pages /r/* ve /e/* wildcard desteklemez → bu 404 sayfası yakalar.
+      var mr = location.pathname.match(/^\/r\/([^\/?#]+)/); // davet (referral)
+      var me = location.pathname.match(/^\/e\/([^\/?#]+)/); // esnaf QR
+      if (!mr && !me) return; // ne davet ne esnaf → normal 404 göster.
 
-      var code = decodeURIComponent(m[1]);
+      var isEsnaf = !!me;
+      var code = decodeURIComponent((me || mr)[1]);
       var ua = navigator.userAgent || "";
       var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/(Macintosh)/i.test(ua) && "ontouchend" in document);
       var isAndroid = /Android/i.test(ua);
       var store = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : null;
-      var scheme = "uniqampus://r/" + encodeURIComponent(code);
+      var scheme = "uniqampus://" + (isEsnaf ? "e/" : "r/") + encodeURIComponent(code);
 
-      // 404 görünümünü "davet" görünümüne çevir.
-      document.getElementById("title").textContent = "UniQampüs'e davet edildin!";
-      document.getElementById("desc").textContent =
-        "Kampüsün dijital meydanı — etkinlikler, ilanlar, forum ve daha fazlası. Uygulamayı aç ya da indir, davetinle başla.";
-      if (code) {
+      // 404 görünümünü esnaf/davet görünümüne çevir.
+      document.getElementById("title").textContent = isEsnaf
+        ? "Öğrenci indirimin hazır!"
+        : "UniQampüs'e davet edildin!";
+      document.getElementById("desc").textContent = isEsnaf
+        ? "Bu esnafın UniQampüs öğrenci indirimini görmek için uygulamayı aç ya da indir."
+        : "Kampüsün dijital meydanı — etkinlikler, ilanlar, forum ve daha fazlası. Uygulamayı aç ya da indir, davetinle başla.";
+      // Esnaf QR kodu iç kod olduğundan gösterilmez; davet kodu gösterilir.
+      if (code && !isEsnaf) {
         var c = document.getElementById("code");
         c.textContent = "Davet kodu: " + code; c.hidden = false;
       }
