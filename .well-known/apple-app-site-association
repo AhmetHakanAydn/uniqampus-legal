@@ -8,7 +8,9 @@
           "/r/*",
           "/e/*",
           "/goygoy/*",
-          "/transport/*"
+          "/transport/*",
+          "/listing/*",
+          "/job/*"
         ]
       }
     ]

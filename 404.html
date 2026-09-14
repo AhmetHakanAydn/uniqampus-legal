@@ -54,28 +54,42 @@
       var APP_STORE = "https://apps.apple.com/app/id6773794797";
       var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.uniqampus.app";
 
-      // GitHub Pages /r/* ve /e/* wildcard desteklemez → bu 404 sayfası yakalar.
+      // GitHub Pages wildcard desteklemez → paylaşım linkleri bu 404 sayfasına düşer.
+      // Uygulama kuruluysa evrensel link (AASA / assetlinks) sayfayı hiç açmadan uygulamayı açar;
+      // buraya gelen ziyaretçi büyük ihtimalle uygulamasız → "Uygulamada aç" + mağaza.
       var mr = location.pathname.match(/^\/r\/([^\/?#]+)/); // davet (referral)
       var me = location.pathname.match(/^\/e\/([^\/?#]+)/); // esnaf QR
-      if (!mr && !me) return; // ne davet ne esnaf → normal 404 göster.
+      var CONTENT = {
+        listing:   { path: "listing",   title: "UniQampüs'te bir ilan",     desc: "Bu alım-satım ilanını görmek ve satıcıya ulaşmak için uygulamayı aç ya da indir." },
+        job:       { path: "job",       title: "UniQampüs'te bir iş ilanı", desc: "Bu iş ilanını görmek ve başvurmak için uygulamayı aç ya da indir." },
+        transport: { path: "transport", title: "UniQampüs'te bir ulaşım ilanı", desc: "Bu ulaşım ilanını görmek için uygulamayı aç ya da indir." },
+        goygoy:    { path: "goygoy",    title: "UniQampüs Goygoy",          desc: "Bu goygoyu görmek için uygulamayı aç ya da indir." }
+      };
+      var mc = location.pathname.match(/^\/(listing|job|transport|goygoy)\/([0-9a-fA-F-]{8,})/);
+      if (!mr && !me && !mc) return; // ne davet ne esnaf ne içerik → normal 404 göster.
 
       var isEsnaf = !!me;
-      var code = decodeURIComponent((me || mr)[1]);
+      var content = mc ? CONTENT[mc[1]] : null;
+      var code = decodeURIComponent((mc ? mc[2] : (me || mr)[1]));
       var ua = navigator.userAgent || "";
       var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/(Macintosh)/i.test(ua) && "ontouchend" in document);
       var isAndroid = /Android/i.test(ua);
       var store = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : null;
-      var scheme = "uniqampus://" + (isEsnaf ? "e/" : "r/") + encodeURIComponent(code);
+      var scheme = "uniqampus://" + (content ? content.path + "/" : isEsnaf ? "e/" : "r/") + encodeURIComponent(code);
 
-      // 404 görünümünü esnaf/davet görünümüne çevir.
-      document.getElementById("title").textContent = isEsnaf
-        ? "Öğrenci indirimin hazır!"
-        : "UniQampüs'e davet edildin!";
-      document.getElementById("desc").textContent = isEsnaf
-        ? "Bu esnafın UniQampüs öğrenci indirimini görmek için uygulamayı aç ya da indir."
-        : "Kampüsün dijital meydanı — etkinlikler, ilanlar, forum ve daha fazlası. Uygulamayı aç ya da indir, davetinle başla.";
-      // Esnaf QR kodu iç kod olduğundan gösterilmez; davet kodu gösterilir.
-      if (code && !isEsnaf) {
+      // 404 görünümünü esnaf/davet/içerik görünümüne çevir.
+      document.getElementById("title").textContent = content
+        ? content.title
+        : isEsnaf
+          ? "Öğrenci indirimin hazır!"
+          : "UniQampüs'e davet edildin!";
+      document.getElementById("desc").textContent = content
+        ? content.desc
+        : isEsnaf
+          ? "Bu esnafın UniQampüs öğrenci indirimini görmek için uygulamayı aç ya da indir."
+          : "Kampüsün dijital meydanı — etkinlikler, ilanlar, forum ve daha fazlası. Uygulamayı aç ya da indir, davetinle başla.";
+      // Esnaf QR kodu iç kod olduğundan gösterilmez; davet kodu gösterilir; içerik id'si gösterilmez.
+      if (code && !isEsnaf && !content) {
         var c = document.getElementById("code");
         c.textContent = "Davet kodu: " + code; c.hidden = false;
       }
