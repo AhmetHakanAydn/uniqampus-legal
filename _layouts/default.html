@@ -1,25 +1,66 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>{{ page.title }} · UniQampus</title>
-  <meta name="description" content="{{ page.description | default: site.description }}" />
-  <meta name="theme-color" content="#4646e0" />
-  <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }} · UniQampus</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="theme-color" content="#14141C">
+<link rel="canonical" href="https://uniqampus.org{{ page.url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="UniQampus">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="{{ page.title }} · UniQampus">
+<meta property="og:url" content="https://uniqampus.org{{ page.url }}">
+<meta property="og:image" content="https://uniqampus.org/og/uniqampus-og-1200x630.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6773794797">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/sayfa.css">
 </head>
 <body>
-  {% include nav.html %}
-  <main class="prose-page">
-    <article class="container prose">
-      {{ content }}
-    </article>
-  </main>
-  {% include footer.html %}
+<a class="skip" href="#main">İçeriğe geç</a>
+{% include ikonlar.html %}
+{% include nav.html %}
+<main id="main">
+  <header class="doc-hero">
+    <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="eyebrow">{% if page.url == "/support/" %}Destek{% else %}Yasal{% endif %}</span>
+      <h1>{{ page.title }}</h1>
+      <p>{% if page.url == "/support/" %}Sorunun mu var? Cevap büyük ihtimalle burada; yoksa bize yaz, bir öğrenci cevaplasın.{% else %}UniQampus'u kullanırken hakların ve verilerin hakkında bilmen gerekenler, açık ve anlaşılır biçimde.{% endif %}</p>
+      <nav class="chips" aria-label="Yasal sayfalar">
+        {% assign sayfalar = "/privacy/|Gizlilik,/kvkk/|KVKK,/terms/|Kullanım Koşulları,/account-deletion/|Hesap silme,/support/|Destek" | split: "," %}
+        {% for s in sayfalar %}{% assign p = s | split: "|" %}<a href="{{ p[0] }}"{% if page.url == p[0] %} aria-current="page"{% endif %}>{{ p[1] }}</a>{% endfor %}
+      </nav>
+    </div>
+  </header>
+  <section class="doc">
+    <div class="wrap">
+      <article class="doc-card prose">
+{{ content }}
+      </article>
+      <aside class="doc-help" aria-label="Yardım">
+        <div><b>Bir sorun mu var?</b><span>Yaz, bir öğrenci cevaplasın.</span></div>
+        <a class="btn btn-primary btn-sm" href="mailto:support@uniqampus.org"><svg class="ic" style="width:18px;height:18px"><use href="#i-mail"/></svg>support@uniqampus.org</a>
+      </aside>
+    </div>
+  </section>
+</main>
+{% include footer.html %}
+<script>
+const LINKS = { ios: "https://apps.apple.com/tr/app/id6773794797", android: "https://play.google.com/store/apps/details?id=com.uniqampus.app" };
+const ua = navigator.userAgent, os = /iPhone|iPad|iPod/i.test(ua) ? "ios" : /Android/i.test(ua) ? "android" : null;
+document.querySelectorAll("[data-store]").forEach(a => a.href = LINKS[a.dataset.store]);
+document.querySelectorAll("[data-download]").forEach(a => { a.href = os ? LINKS[os] : "/#indir"; });
+document.getElementById("yr").textContent = new Date().getFullYear();
+const nav = document.getElementById("nav");
+const onScroll = () => nav.classList.toggle("scrolled", scrollY > 10);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+</script>
 </body>
 </html>
