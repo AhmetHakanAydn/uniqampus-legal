@@ -1,100 +1,146 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>UniQampüs — Goygoy</title>
-  <meta name="robots" content="noindex" />
-  <!-- Sosyal önizleme -->
-  <meta property="og:title" content="UniQampüs Goygoy" />
-  <meta property="og:description" content="Kampüsün dijital meydanı. Uygulamayı aç ya da indir, goygoyu gör." />
-  <meta name="theme-color" content="#DC2626" />
-  <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <style>
-    :root { --red:#DC2626; --ink:#111827; --muted:#6B7280; --bg:#FFF7F5; --card:#FFFFFF; --border:#F0D9D5; }
-    * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-    html,body { margin:0; height:100%; }
-    body {
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      background:linear-gradient(160deg,#FFF7F5 0%,#FDECEA 100%);
-      color:var(--ink); display:flex; align-items:center; justify-content:center;
-      min-height:100%; padding:24px;
-    }
-    .card {
-      width:100%; max-width:380px; background:var(--card); border:1px solid var(--border);
-      border-radius:24px; padding:32px 24px; text-align:center;
-      box-shadow:0 12px 40px rgba(220,38,38,0.10);
-    }
-    .logo {
-      width:72px; height:72px; border-radius:20px; margin:0 auto 18px; display:block;
-      object-fit:cover; background:#fff; box-shadow:0 8px 24px rgba(220,38,38,0.18);
-    }
-    h1 { font-size:21px; font-weight:800; margin:0 0 6px; letter-spacing:-0.3px; }
-    p { font-size:14.5px; line-height:1.5; color:var(--muted); margin:0 0 22px; }
-    .btn {
-      display:block; width:100%; padding:15px 16px; border-radius:14px; font-size:16px;
-      font-weight:700; text-decoration:none; margin-bottom:12px; border:none; cursor:pointer;
-    }
-    .btn-primary { background:var(--red); color:#fff; box-shadow:0 6px 18px rgba(220,38,38,0.30); }
-    .btn-ghost { background:#fff; color:var(--ink); border:1px solid #E5E7EB; }
-    .stores { display:flex; gap:10px; justify-content:center; margin-top:4px; }
-    .stores a { flex:1; }
-    .foot { margin-top:18px; font-size:12px; color:#9CA3AF; }
-    .foot a { color:#9CA3AF; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UniQampus'ta aç</title>
+<meta name="description" content="Bu bağlantı UniQampus uygulamasında açılır. Uygulama yoksa ücretsiz indir.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14141C">
+<meta property="og:site_name" content="UniQampus">
+<meta property="og:title" content="UniQampus'ta aç">
+<meta property="og:description" content="Kampüsündeki her şey tek uygulamada. Bağlantıyı uygulamada aç ya da ücretsiz indir.">
+<meta property="og:image" content="https://uniqampus.org/og/uniqampus-og-1200x630.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#4646E0;--grad:linear-gradient(135deg,#4F46E5,#8B5CF6);--ink:#14141C;--bg:#F7F8FF;--line:#ECEDF6;--muted:#5B5E77;--lime:#C8F55A;--ease:cubic-bezier(.2,.7,.2,1);--spring:cubic-bezier(.34,1.56,.64,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--ink);color:#fff;min-height:100svh;display:flex;flex-direction:column;align-items:center;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;isolation:isolate}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #5CC8FF;outline-offset:3px;border-radius:8px}
+.blob{position:fixed;border-radius:50%;z-index:-1}
+.b1{width:560px;height:560px;left:-240px;top:-220px;background:radial-gradient(circle,rgba(79,70,229,.8),transparent 65%);animation:d 16s ease-in-out infinite alternate}
+.b2{width:600px;height:600px;right:-280px;bottom:-200px;background:radial-gradient(circle,rgba(139,92,246,.65),transparent 65%);animation:d 20s ease-in-out infinite alternate-reverse}
+@keyframes d{to{transform:translate(80px,60px) scale(1.1)}}
+.wrap{width:100%;max-width:440px;padding:20px 20px calc(72px + env(safe-area-inset-bottom));display:flex;flex-direction:column;flex:1}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.03em;margin:4px 0 36px}
+.logo-mark{width:32px;height:32px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font-size:19px}
+.logo .q{background:linear-gradient(100deg,#9C9CFF,#D0B0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.emo{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;font-size:36px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);margin-bottom:20px;animation:pop .7s var(--spring) both}
+@keyframes pop{from{transform:scale(.4) rotate(-12deg);opacity:0}}
+h1{font-size:34px;line-height:1.05;letter-spacing:-.04em;font-weight:800}
+.sub{margin-top:12px;font-size:16px;line-height:1.5;color:#C9CAE0;font-weight:500}
+.prev{margin-top:24px;padding:16px;border-radius:20px;background:#fff;color:var(--ink);display:flex;gap:12px;align-items:center;box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
+.prev .th{width:52px;height:52px;border-radius:14px;flex:none;background:var(--grad);display:grid;place-items:center;font-size:24px}
+.prev b{display:block;font-size:15px;letter-spacing:-.01em}
+.prev small{display:block;font-size:13px;color:var(--muted);font-weight:600;margin-top:2px}
+.prev .pill{margin-left:auto;padding:5px 10px;border-radius:999px;background:var(--lime);font-size:12px;font-weight:800;white-space:nowrap}
+.spacer{flex:1;min-height:28px}
+.open{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;height:60px;border-radius:18px;background:var(--grad);font-size:18px;font-weight:800;box-shadow:0 14px 34px -10px rgba(139,92,246,.8);overflow:hidden;transition:transform .25s var(--spring)}
+.open:active{transform:scale(.97)}
+.open::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);animation:shine 3s var(--ease) infinite}
+@keyframes shine{0%{transform:translateX(-120%)}60%,100%{transform:translateX(120%)}}
+.or{display:flex;align-items:center;gap:12px;margin:20px 0 14px;font-size:13px;color:#9092AC;font-weight:600}
+.or::before,.or::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.12)}
+.stores{display:flex;gap:10px}
+.store{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;height:56px;border-radius:16px;background:#fff;color:var(--ink);transition:transform .25s var(--spring)}
+.store:active{transform:scale(.97)}
+.store svg{width:24px;height:24px}
+.store small{display:block;font-size:10.5px;font-weight:600;opacity:.7;line-height:1.1}
+.store b{display:block;font-size:16px;font-weight:800;line-height:1.1}
+.hint{margin-top:16px;text-align:center;font-size:13px;color:#9092AC;line-height:1.5}
+.hint a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.rise{animation:rise .7s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <img class="logo" src="/assets/logo.jpg" alt="UniQampüs" />
-    <h1>UniQampüs Goygoy</h1>
-    <p>Bu goygoyu uygulamada görüntüle. Uygulaman varsa açılır; yoksa indirip bakabilirsin.</p>
-
-    <a class="btn btn-primary" id="openApp" href="#">Uygulamada Aç</a>
-    <div class="stores">
-      <a class="btn btn-ghost" id="appStore" href="https://apps.apple.com/app/id6773794797">App Store</a>
-      <a class="btn btn-ghost" id="playStore" href="https://play.google.com/store/apps/details?id=com.uniqampus.app">Google Play</a>
-    </div>
-
-    <div class="foot">
-      <a href="https://uniqampus.org">uniqampus.org</a> · Link açılmıyorsa uygulamayı yukarıdan indir.
-    </div>
+<div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+<main class="wrap">
+  <a href="https://uniqampus.org/" class="logo" aria-label="UniQampus ana sayfa"><span class="logo-mark" aria-hidden="true">Q</span><span>Uni<span class="q">Q</span>ampus</span></a>
+  <div class="emo" id="emo" aria-hidden="true">🎉</div>
+  <h1 id="title" class="rise" style="animation-delay:.08s">Arkadaşın seni UniQampus'a davet etti 🎉</h1>
+  <p class="sub rise" id="sub" style="animation-delay:.16s">Katıl, ilk görevini tamamla; ikiniz de Hediye Havuzu'ndan esnaf hediyesi kazanın.</p>
+  <div class="prev rise" id="prev" style="animation-delay:.24s"></div>
+  <div class="spacer"></div>
+  <a class="open rise" id="open" href="#" style="animation-delay:.32s">Uygulamada aç</a>
+  <div class="or" id="or">Uygulama yok mu? Ücretsiz indir</div>
+  <div class="stores">
+    <a class="store" data-store="ios" href="#" aria-label="App Store'dan indir"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.8c.6-.8 1.1-1.8 1-2.9-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.7-1 2.8 1 .1 2-.5 2.7-1.3z"/></svg><span><small>App Store'dan</small><b>İndir</b></span></a>
+    <a class="store" data-store="android" href="#" aria-label="Google Play'den al"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D2FF" d="M3.6 2.4 13.3 12l-9.7 9.6c-.3-.2-.5-.6-.5-1.1V3.5c0-.5.2-.9.5-1.1z"/><path fill="#00E676" d="M3.6 2.4c.4-.3 1-.3 1.5 0l11.3 6.5-3.1 3.1z"/><path fill="#FF3D57" d="M3.6 21.6 13.3 12l3.1 3.1-11.3 6.5c-.5.3-1.1.3-1.5 0z"/><path fill="#FFC800" d="m16.4 8.9 3.8 2.2c.8.5.8 1.3 0 1.8l-3.8 2.2-3.1-3.1z"/></svg><span><small>Google Play'den</small><b>Al</b></span></a>
   </div>
+  <p class="hint"><span id="hintTxt">İndirdikten sonra bu linke tekrar dokun, kaldığın yerden açılsın.<br></span><a href="https://uniqampus.org/">UniQampus nedir?</a></p>
+</main>
 
-  <script>
-    (function () {
-      var APP_STORE = "https://apps.apple.com/app/id6773794797";
-      var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.uniqampus.app";
 
-      // URL'den goygoy id'sini çıkar:  /goygoy/<id>
-      var m = location.pathname.match(/\/goygoy\/([^\/?#]+)/);
-      var id = m ? decodeURIComponent(m[1]) : "";
+<script>
+const LINKS = { ios:"https://apps.apple.com/tr/app/id6773794797", android:"https://play.google.com/store/apps/details?id=com.uniqampus.app" };
+const SCHEME = "uniqampus://";   // Universal Link / App Link kuruluysa https://uniqampus.org/... doğrudan uygulamayı açar
+/* GitHub Pages joker yol desteklemez → uygulamanın ürettiği bağlantılar bu sayfaya düşer (404.html + kopyaları):
+   /r/KOD davet · /e/KOD esnaf QR · /goygoy/ID · /listing/ID · /job/ID · /transport/ID · /indir (QR: cihaza göre mağaza) */
+const KEY = { r:"r", e:"e", goygoy:"g", listing:"i", job:"j", transport:"y" };
+const V = {
+  r:{emo:"🎉",t:"Arkadaşın seni UniQampus'a davet etti 🎉",s:"Katıl ve öğrenciliğini doğrula; sen de arkadaşlarını davet ederek Hediye Havuzu'ndan esnaf hediyesi kazan.",p:["👋","Arkadaşın seni bekliyor","Davet bağlantısı","Davet"]},
+  e:{emo:"☕",t:"Bu esnafta öğrenci indirimi için uygulamayı indir",s:"Kampüs Pass ile kasada QR'ı okut, indirimin anında uygulansın.",p:["☕","Kampüs Pass esnafı","Kasada QR'ı okut","Öğrenci indirimi"]},
+  g:{emo:"💬",t:"Bu Goygoy paylaşımı seni bekliyor",s:"Kampüsünün gündemini gör, yorum yap, sen de paylaş.",p:["💬","Kampüsünden bir paylaşım","Goygoy","Goygoy"]},
+  i:{emo:"🛍️",t:"Bu ilan hâlâ yayında, kaçırma",s:"Detayları gör, satıcıya yaz, teklifini ver.",p:["📚","Kampüste bir ilan","Al-Sat-Bul","İlan"]},
+  j:{emo:"💼",t:"Kampüsünün yakınında bir iş ilanı var",s:"İlanın tamamını gör ve uygulamadan hemen başvur.",p:["💼","Bir iş ilanı","İş ilanları","İş"]},
+  y:{emo:"🚗",t:"Aynı yöne gidiyorsunuz, yol arkadaşın hazır",s:"Yolculuğun detaylarını gör, yerini ayırt.",p:["🚗","Bir yolculuk ilanı","Yol arkadaşı","Yolculuk"]},
+  d:{emo:"📲",t:"UniQampus'u indir",s:"Mağaza sayfası açılıyor… Açılmazsa aşağıdan seç."},
+  x:{emo:"🧭",t:"Aradığın sayfa burada değil",s:"Ama kampüsündeki her şey tek uygulamada."}
+};
+const ua = navigator.userAgent, os = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && "ontouchend" in document) ? "ios" : /Android/i.test(ua) ? "android" : null;
+document.querySelectorAll("[data-store]").forEach(a => a.href = LINKS[a.dataset.store]);
 
-      var ua = navigator.userAgent || "";
-      var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/(Macintosh)/i.test(ua) && "ontouchend" in document);
-      var isAndroid = /Android/i.test(ua);
-      var store = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : null;
+const $ = id => document.getElementById(id);
+const m = location.pathname.match(/^\/(r|e|goygoy|listing|job|transport)(?:\/([^\/?#]+))?\/?$/);
+const k = m ? KEY[m[1]] : /^\/indir\/?$/.test(location.pathname) ? "d" : "x";
+const id = m && m[2] ? decodeURIComponent(m[2]) : "";
+const v = V[k];
+$("emo").textContent = v.emo;
+$("title").textContent = v.t;
+$("sub").textContent = v.s;
+document.title = v.t + " · UniQampus";
 
-      // "Uygulamada Aç" → custom scheme; kurulu değilse kısa süre sonra mağazaya düş.
-      var scheme = "uniqampus://goygoy/" + encodeURIComponent(id);
-      var openBtn = document.getElementById("openApp");
-      openBtn.setAttribute("href", scheme);
-      openBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        var t = setTimeout(function () { if (store) location.href = store; }, 1200);
-        window.addEventListener("pagehide", function () { clearTimeout(t); });
-        location.href = scheme;
-      });
+const prev = $("prev");
+if (v.p) {
+  // Kullanıcıdan gelen yol parçası (davet kodu) yalnız textContent ile yazılır
+  const th = document.createElement("span"); th.className = "th"; th.setAttribute("aria-hidden", "true"); th.textContent = v.p[0];
+  const tx = document.createElement("span"), b = document.createElement("b"), sm = document.createElement("small");
+  b.textContent = v.p[1]; sm.textContent = k === "r" && id ? "Davet kodu: " + id : v.p[2]; tx.append(b, sm);
+  const pill = document.createElement("span"); pill.className = "pill"; pill.textContent = v.p[3];
+  prev.append(th, tx, pill);
+} else prev.hidden = true;
 
-      // Mağaza butonlarını platforma göre öne çıkar.
-      if (isIOS) document.getElementById("playStore").style.display = "none";
-      if (isAndroid) document.getElementById("appStore").style.display = "none";
-
-      // Mobilde universal link app'i açmadıysa (kurulu değil) kısa gecikmeyle mağazaya yönlendir.
-      if (store && id) {
-        setTimeout(function () { location.href = store; }, 2500);
-      }
-    })();
-  </script>
+const open = $("open");
+if (k === "x" || k === "d") {
+  $("hintTxt").hidden = true;
+  $("or").textContent = "Ücretsiz indir";
+}
+if (k === "x") {
+  open.textContent = "Ana sayfaya dön"; open.href = "https://uniqampus.org/";
+} else if (k === "d") {
+  if (os) {                                         // QR'dan gelen telefon: doğrudan kendi mağazası
+    open.textContent = "Mağazada aç"; open.href = LINKS[os];
+    location.replace(LINKS[os]);
+  } else {                                          // bilgisayar: yönlendirme yok, mağazayı kendisi seçer
+    $("sub").textContent = "Telefonunun mağazasını aşağıdan seç.";
+    open.textContent = "Ana sayfaya dön"; open.href = "https://uniqampus.org/";
+  }
+} else {
+  open.href = SCHEME + m[1] + (id ? "/" + encodeURIComponent(id) : "");
+  open.onclick = e => {                             // Uygulama açılmazsa 1,6 sn sonra mağazaya düş
+    if (!os) { e.preventDefault(); location.href = "https://uniqampus.org/#indir"; return; }
+    const t = setTimeout(() => { if (!document.hidden) location.href = LINKS[os]; }, 1600);
+    addEventListener("pagehide", () => clearTimeout(t), { once:true });
+  };
+}
+</script>
 </body>
 </html>
