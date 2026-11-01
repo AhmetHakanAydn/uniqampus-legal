@@ -10,7 +10,8 @@
           "/goygoy/*",
           "/transport/*",
           "/listing/*",
-          "/job/*"
+          "/job/*",
+          "/u/*"
         ]
       }
     ]
