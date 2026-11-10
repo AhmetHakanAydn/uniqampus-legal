@@ -83,14 +83,15 @@ h1{font-size:34px;line-height:1.05;letter-spacing:-.04em;font-weight:800}
 const LINKS = { ios:"https://apps.apple.com/tr/app/id6773794797", android:"https://play.google.com/store/apps/details?id=com.uniqampus.app" };
 const SCHEME = "uniqampus://";   // Universal Link / App Link kuruluysa https://uniqampus.org/... doğrudan uygulamayı açar
 /* GitHub Pages joker yol desteklemez → uygulamanın ürettiği bağlantılar bu sayfaya düşer (404.html + kopyaları):
-   /r/KOD davet · /e/KOD esnaf QR · /goygoy/ID · /listing/ID · /job/ID · /transport/ID · /indir (QR: cihaza göre mağaza) */
-const KEY = { r:"r", e:"e", goygoy:"g", listing:"i", job:"j", transport:"y" };
+   /r/KOD davet · /e/KOD esnaf QR · /goygoy/ID · /listing/ID · /job/ID · /transport/ID · /u/AD profil · /indir (QR: cihaza göre mağaza) */
+const KEY = { r:"r", e:"e", goygoy:"g", listing:"i", job:"j", transport:"y", u:"u" };
 const V = {
   r:{emo:"🎉",t:"Arkadaşın seni UniQampus'a davet etti 🎉",s:"Katıl ve öğrenciliğini doğrula; sen de arkadaşlarını davet ederek Hediye Havuzu'ndan esnaf hediyesi kazan.",p:["👋","Arkadaşın seni bekliyor","Davet bağlantısı","Davet"]},
   e:{emo:"☕",t:"Bu esnafta öğrenci indirimi için uygulamayı indir",s:"Kampüs Pass ile kasada QR'ı okut, indirimin anında uygulansın.",p:["☕","Kampüs Pass esnafı","Kasada QR'ı okut","Öğrenci indirimi"]},
   g:{emo:"💬",t:"Bu Goygoy paylaşımı seni bekliyor",s:"Kampüsünün gündemini gör, yorum yap, sen de paylaş.",p:["💬","Kampüsünden bir paylaşım","Goygoy","Goygoy"]},
   i:{emo:"🛍️",t:"Bu ilan hâlâ yayında, kaçırma",s:"Detayları gör, satıcıya yaz, teklifini ver.",p:["📚","Kampüste bir ilan","Al-Sat-Bul","İlan"]},
   j:{emo:"💼",t:"Kampüsünün yakınında bir iş ilanı var",s:"İlanın tamamını gör ve uygulamadan hemen başvur.",p:["💼","Bir iş ilanı","İş ilanları","İş"]},
+  u:{emo:"👤",t:"Bu profil seni UniQampus'ta bekliyor",s:"Profili gör, takip et, mesaj gönder.",p:["👤","Bir UniQampus profili","Profil","Profil"]},
   y:{emo:"🚗",t:"Aynı yöne gidiyorsunuz, yol arkadaşın hazır",s:"Yolculuğun detaylarını gör, yerini ayırt.",p:["🚗","Bir yolculuk ilanı","Yol arkadaşı","Yolculuk"]},
   d:{emo:"📲",t:"UniQampus'u indir",s:"Mağaza sayfası açılıyor… Açılmazsa aşağıdan seç."},
   x:{emo:"🧭",t:"Aradığın sayfa burada değil",s:"Ama kampüsündeki her şey tek uygulamada."}
@@ -99,7 +100,7 @@ const ua = navigator.userAgent, os = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh
 document.querySelectorAll("[data-store]").forEach(a => a.href = LINKS[a.dataset.store]);
 
 const $ = id => document.getElementById(id);
-const m = location.pathname.match(/^\/(r|e|goygoy|listing|job|transport)(?:\/([^\/?#]+))?\/?$/);
+const m = location.pathname.match(/^\/(r|e|goygoy|listing|job|transport|u)(?:\/([^\/?#]+))?\/?$/);
 const k = m ? KEY[m[1]] : /^\/indir\/?$/.test(location.pathname) ? "d" : "x";
 const id = m && m[2] ? decodeURIComponent(m[2]) : "";
 const v = V[k];
@@ -113,7 +114,7 @@ if (v.p) {
   // Kullanıcıdan gelen yol parçası (davet kodu) yalnız textContent ile yazılır
   const th = document.createElement("span"); th.className = "th"; th.setAttribute("aria-hidden", "true"); th.textContent = v.p[0];
   const tx = document.createElement("span"), b = document.createElement("b"), sm = document.createElement("small");
-  b.textContent = v.p[1]; sm.textContent = k === "r" && id ? "Davet kodu: " + id : v.p[2]; tx.append(b, sm);
+  b.textContent = v.p[1]; sm.textContent = k === "r" && id ? "Davet kodu: " + id : k === "u" && id ? "@" + id : v.p[2]; tx.append(b, sm);
   const pill = document.createElement("span"); pill.className = "pill"; pill.textContent = v.p[3];
   prev.append(th, tx, pill);
 } else prev.hidden = true;
