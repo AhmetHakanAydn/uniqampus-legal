@@ -11,7 +11,8 @@
           "/transport/*",
           "/listing/*",
           "/job/*",
-          "/u/*"
+          "/u/*",
+          "/app/*"
         ]
       }
     ]

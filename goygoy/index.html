@@ -83,7 +83,7 @@ h1{font-size:34px;line-height:1.05;letter-spacing:-.04em;font-weight:800}
 const LINKS = { ios:"https://apps.apple.com/tr/app/id6773794797", android:"https://play.google.com/store/apps/details?id=com.uniqampus.app" };
 const SCHEME = "uniqampus://";   // Universal Link / App Link kuruluysa https://uniqampus.org/... doğrudan uygulamayı açar
 /* GitHub Pages joker yol desteklemez → uygulamanın ürettiği bağlantılar bu sayfaya düşer (404.html + kopyaları):
-   /r/KOD davet · /e/KOD esnaf QR · /goygoy/ID · /listing/ID · /job/ID · /transport/ID · /u/AD profil · /indir (QR: cihaza göre mağaza) */
+   /r/KOD davet · /e/KOD esnaf QR · /goygoy/ID · /listing/ID · /job/ID · /transport/ID · /u/AD profil · /app/HEDEF uygulama içi · /indir (QR: cihaza göre mağaza) */
 const KEY = { r:"r", e:"e", goygoy:"g", listing:"i", job:"j", transport:"y", u:"u" };
 const V = {
   r:{emo:"🎉",t:"Arkadaşın seni UniQampus'a davet etti 🎉",s:"Katıl ve öğrenciliğini doğrula; sen de arkadaşlarını davet ederek Hediye Havuzu'ndan esnaf hediyesi kazan.",p:["👋","Arkadaşın seni bekliyor","Davet bağlantısı","Davet"]},
@@ -91,6 +91,7 @@ const V = {
   g:{emo:"💬",t:"Bu Goygoy paylaşımı seni bekliyor",s:"Kampüsünün gündemini gör, yorum yap, sen de paylaş.",p:["💬","Kampüsünden bir paylaşım","Goygoy","Goygoy"]},
   i:{emo:"🛍️",t:"Bu ilan hâlâ yayında, kaçırma",s:"Detayları gör, satıcıya yaz, teklifini ver.",p:["📚","Kampüste bir ilan","Al-Sat-Bul","İlan"]},
   j:{emo:"💼",t:"Kampüsünün yakınında bir iş ilanı var",s:"İlanın tamamını gör ve uygulamadan hemen başvur.",p:["💼","Bir iş ilanı","İş ilanları","İş"]},
+  a:{emo:"✨",t:"Bu sayfa UniQampus uygulamasında açılır",s:"Uygulamayı aç ya da ücretsiz indir; kampüsündeki her şey tek yerde.",p:["📱","Uygulama içi sayfa","UniQampus","Uygulama"]},
   u:{emo:"👤",t:"Bu profil seni UniQampus'ta bekliyor",s:"Profili gör, takip et, mesaj gönder.",p:["👤","Bir UniQampus profili","Profil","Profil"]},
   y:{emo:"🚗",t:"Aynı yöne gidiyorsunuz, yol arkadaşın hazır",s:"Yolculuğun detaylarını gör, yerini ayırt.",p:["🚗","Bir yolculuk ilanı","Yol arkadaşı","Yolculuk"]},
   d:{emo:"📲",t:"UniQampus'u indir",s:"Mağaza sayfası açılıyor… Açılmazsa aşağıdan seç."},
@@ -101,7 +102,9 @@ document.querySelectorAll("[data-store]").forEach(a => a.href = LINKS[a.dataset.
 
 const $ = id => document.getElementById(id);
 const m = location.pathname.match(/^\/(r|e|goygoy|listing|job|transport|u)(?:\/([^\/?#]+))?\/?$/);
-const k = m ? KEY[m[1]] : /^\/indir\/?$/.test(location.pathname) ? "d" : "x";
+// /app/<hedef>[/<kimlik>] (Ana Sayfa Hero uygulama içi bağlantıları): iki parçalı olabilir → ayrı eşleşme
+const am = !m && location.pathname.match(/^\/app\/([a-z-]+)(?:\/([^\/?#]+))?\/?$/);
+const k = m ? KEY[m[1]] : am ? "a" : /^\/indir\/?$/.test(location.pathname) ? "d" : "x";
 const id = m && m[2] ? decodeURIComponent(m[2]) : "";
 const v = V[k];
 $("emo").textContent = v.emo;
@@ -135,7 +138,9 @@ if (k === "x") {
     open.textContent = "Ana sayfaya dön"; open.href = "https://uniqampus.org/";
   }
 } else {
-  open.href = SCHEME + m[1] + (id ? "/" + encodeURIComponent(id) : "");
+  open.href = am
+    ? SCHEME + "app/" + am[1] + (am[2] ? "/" + encodeURIComponent(decodeURIComponent(am[2])) : "")
+    : SCHEME + m[1] + (id ? "/" + encodeURIComponent(id) : "");
   open.onclick = e => {                             // Uygulama açılmazsa 1,6 sn sonra mağazaya düş
     if (!os) { e.preventDefault(); location.href = "https://uniqampus.org/#indir"; return; }
     const t = setTimeout(() => { if (!document.hidden) location.href = LINKS[os]; }, 1600);
