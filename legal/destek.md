@@ -32,13 +32,16 @@ UniQampüs, üniversite öğrencilerinin güvenli şekilde sosyalleşmesi, etkin
 kampüs deneyimini paylaşması amacıyla tasarlanmış bir topluluk uygulamasıdır.
 
 ### Nasıl kayıt olunur?
-Kayıt, **kişisel e-posta adresinizle** yapılır. Hesabınızı oluşturduktan sonra hemen giriş yapabilirsiniz.
+Kayıt için geçerli bir **e-posta adresi** ve **cep telefonu numarası** gerekir. E-posta adresiniz, gönderilen tek
+kullanımlık kodla doğrulanır; .edu.tr uzantılı üniversite e-postası zorunlu değildir. Telefon numarasına kayıt için SMS
+kodu gönderilmez.
 
 ### Öğrenci doğrulaması nasıl yapılır?
-Öğrencilere sunulan tüm özelliklerden yararlanabilmek için **öğrenci kimlik kartınızın görselini**
-uygulamaya yükleyerek doğrulama sürecini tamamlamanız gerekir. Yüklediğiniz belge yalnızca doğrulama
-amacıyla, erişimi kısıtlı bir alanda işlenir. Doğrulama tamamlanana kadar hesabınız sınırlı (yalnızca
-görüntüleme) yetkilerle çalışır.
+Öğrencilik doğrulamasını uygulamanın içinden siz başlatırsınız. Doğrulama için T.C. kimlik numaranız ile öğrenci
+belgeniz veya öğrenci kimliğiniz istenir; hediye kampanyaları için ayrıca e-Devlet barkodlu öğrenci belgeniz yetkili
+ekipçe kontrol edilir. Belgeniz ve T.C. kimlik numaranız herkese açık değildir; doğrulama tamamlandıktan sonra düz T.C.
+kimlik numarası silinir. Doğrulama tamamlanana kadar hesabınız sınırlı yetkilerle çalışır (içerikleri görebilir, ancak
+paylaşım yapamazsınız). Ayrıntılar [KVKK Aydınlatma Metni](https://uniqampus.org/kvkk)'nde yer alır.
 
 ### Doğrulamada sorun yaşıyorsam ne yapmalıyım?
 Belgeniz okunmuyor veya doğrulama tamamlanmıyorsa **support@uniqampus.org** adresine yazın; uygun
@@ -70,12 +73,13 @@ Hesap silme talebinde, hesabınızla ilişkili e-posta adresini belirtmeniz gere
 kimlik/doğrulama adımları uygulanabilir.
 
 ### Silinen veriler
-Hesap silme işlemi tamamlandığında hesabınız, profil bilgileriniz ve uygulama içi kullanıcı verileriniz
-silinir veya anonim hale getirilir.
+Hesabınızı sildiğinizde canlı sistemdeki profiliniz, paylaşımlarınız, mesajlarınız, belgeleriniz ve kullanılmamış
+hediye haklarınız silme süreci kapsamında kaldırılır. İşlem geri alınamaz.
 
 ### Saklanması gerekebilecek veriler
-Yasal yükümlülükler, güvenlik incelemeleri, uyuşmazlık çözümü, kötüye kullanımın önlenmesi veya
-mevzuattan kaynaklanan zorunluluklar nedeniyle bazı kayıtların sınırlı süreyle saklanması gerekebilir.
+Kanuni saklama, güvenlik, hakların korunması ve mükerrer kampanya kullanımını önleme amacıyla gereken sınırlı kayıtlar
+ayrıca saklanabilir. Şifreli yedekler olağan olarak en çok 30 gün saklanır. Ayrıntılı liste:
+[Hesap ve Veri Silme](https://uniqampus.org/account-deletion).
 
 ## Topluluk Güvenliği ve Şikayetler
 
@@ -103,6 +107,7 @@ Metni üzerinden ulaşabilirsiniz.
 - **Kullanım Koşulları:** [https://uniqampus.org/terms](https://uniqampus.org/terms)
 - **KVKK Aydınlatma Metni:** [https://uniqampus.org/kvkk](https://uniqampus.org/kvkk)
 - **Hesap ve Veri Silme:** [https://uniqampus.org/account-deletion](https://uniqampus.org/account-deletion)
+- **Hediye Kampanyaları Genel Koşulları:** [https://uniqampus.org/kampanya-kosullari](https://uniqampus.org/kampanya-kosullari)
 
 KVKK kapsamındaki bilgi alma, düzeltme, silme, itiraz etme veya veri işleme faaliyetlerine ilişkin
 taleplerinizi **support@uniqampus.org** adresine iletebilirsiniz.
@@ -130,9 +135,15 @@ formatlar ve maksimum dosya boyutu uygulama içinde ayrıca belirtilebilir.
 Spam, gereksiz veya tanıtımlar klasörünü kontrol edin. Hâlâ ulaşmadıysa farklı bir talep oluşturun veya
 destek ekibiyle iletişime geçin.
 
+## Hediye Kampanyaları
+
+Her kampanyanın şehri, tarihleri, stoku ve kullanım şartları kampanya duyurusunda yazar. Hediye hakkı için e-Devlet
+barkodlu öğrenci belgesinin doğrulanması gerekir; bir kişi aynı kampanyadan yalnızca bir kez yararlanabilir. Genel
+koşullar: [Ücretsiz Hediye Kampanyaları Genel Koşulları](https://uniqampus.org/kampanya-kosullari).
+
 ## Çocuk Güvenliği
 
-UniQampüs, 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altında olduğunu düşündüğünüz bir
+13 yaşından küçük kişiler UniQampüs'e üye olamaz. 13 yaşın altında olduğunu düşündüğünüz bir
 kullanıcı tespit ederseniz lütfen **support@uniqampus.org** adresine bildirin.
 
 ## Geri Bildirim ve Öneriler
@@ -146,7 +157,8 @@ Yeni özellik önerileri, hata bildirimleri veya tasarım geri bildirimleri içi
 - Kullanım Koşulları: [https://uniqampus.org/terms](https://uniqampus.org/terms)
 - KVKK Aydınlatma Metni: [https://uniqampus.org/kvkk](https://uniqampus.org/kvkk)
 - Hesap ve Veri Silme: [https://uniqampus.org/account-deletion](https://uniqampus.org/account-deletion)
+- Hediye Kampanyaları Genel Koşulları: [https://uniqampus.org/kampanya-kosullari](https://uniqampus.org/kampanya-kosullari)
 
 ## Son Güncelleme
 
-01 Haziran 2026
+18 Kasım 2026

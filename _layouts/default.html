@@ -34,7 +34,7 @@
       <h1>{{ page.title }}</h1>
       <p>{% if page.url == "/support/" %}Sorunun mu var? Cevap büyük ihtimalle burada; yoksa bize yaz, bir öğrenci cevaplasın.{% else %}UniQampus'u kullanırken hakların ve verilerin hakkında bilmen gerekenler, açık ve anlaşılır biçimde.{% endif %}</p>
       <nav class="chips" aria-label="Yasal sayfalar">
-        {% assign sayfalar = "/privacy/|Gizlilik,/kvkk/|KVKK,/terms/|Kullanım Koşulları,/account-deletion/|Hesap silme,/support/|Destek" | split: "," %}
+        {% assign sayfalar = "/privacy/|Gizlilik,/kvkk/|KVKK,/terms/|Kullanım Koşulları,/account-deletion/|Hesap silme,/kampanya-kosullari/|Kampanya koşulları,/support/|Destek" | split: "," %}
         {% for s in sayfalar %}{% assign p = s | split: "|" %}<a href="{{ p[0] }}"{% if page.url == p[0] %} aria-current="page"{% endif %}>{{ p[1] }}</a>{% endfor %}
       </nav>
     </div>

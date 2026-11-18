@@ -4,67 +4,34 @@ layout: default
 permalink: /account-deletion/
 ---
 
-# UniQampüs — Hesap ve Veri Silme
+# UniQampus Hesap ve Veri Silme
 
-**Son Güncelleme:** 01.06.2026
+**Yürürlük tarihi:** 18 Kasım 2026 · **Son güncelleme:** 18 Kasım 2026
 
-UniQampüs'te hesap oluşturan kullanıcılar, hesaplarını ve hesapla ilişkili kişisel verilerini
-diledikleri zaman silebilir. Silme talebini iki yoldan iletebilirsiniz.
+## 1. Hesap nasıl silinir?
 
-## 1. Uygulama içinden hesap silme (en hızlı yöntem)
+1. UniQampus uygulamasını açın ve hesabınıza giriş yapın.
+1. Profil → Ayarlar → Hesabımı Sil yolunu izleyin.
+1. Ekrandaki uyarıları okuyun ve kimliğiniz doğrulanarak silme işlemini tamamlayın.
 
-1. Uygulamayı açın ve giriş yapın.
-2. **Profil → Ayarlar → Hesabımı Sil** adımlarını izleyin.
-3. Onay adımını tamamlayın.
+Uygulamaya giremiyorsanız support@uniqampus.org adresine hesabınızda kayıtlı e-postanızdan talep iletebilirsiniz. Güvenlik için talebin gerçekten size ait olduğunu doğrulamamız gerekebilir.
 
-Hesabınız bu işlemle silme sürecine alınır.
+## 2. Silmenin etkisi
 
-## 2. Web üzerinden hesap silme talebi (uygulamaya erişmeden)
+Hesabınızı sildiğinizde hesabınıza erişiminiz sona erer ve canlı sistemdeki profiliniz, paylaşımlarınız, mesajlarınız, belgeleriniz ve kullanılmamış hediye haklarınız mevcut silme süreci kapsamında kaldırılır. İşlem geri alınamaz. Kanuni saklama, güvenlik, hakların korunması ve mükerrer kampanya kullanımını önleme amacıyla gereken sınırlı kayıtlar ayrıca saklanabilir.
 
-Uygulamaya erişemiyorsanız veya hesabınızı web üzerinden silmek istiyorsanız:
+## 3. Geçici veya ayrı saklanan kayıtlar
 
-- **support@uniqampus.org** adresine, **hesabınızla ilişkili e-posta adresinden** bir e-posta gönderin.
-- Konu satırına **“Hesap Silme Talebi”** yazın.
-- Mesajda, hesabınıza kayıtlı e-posta adresini belirtin.
+- Yeni şifreli operasyonel yedekler olağan olarak en çok 30 gün süreyle saklanır. Önceki altyapılara ait arşiv kopyaları farklı imha sürecine tabidir; saklama gerekçesi sona erdiğinde güvenli biçimde ortadan kaldırılır.
+- Ticari elektronik ileti onayı: süresi bittiğinde ispat amacıyla 3 yıl; pazarlama gönderim kayıtları için ilgili mevzuat.
+- Kampanya tekilleştirme kayıtları, hesap bağlantısı silinse de aynı kampanyadan tekrar yararlanılmasını önlemek için gerekli ve hukuken geçerli saklama süresi boyunca sınırlı şekilde tutulabilir.
+- Güvenlik ve trafik kayıtları, uygulanabilir mevzuat ile güvenlik veya hukuki yükümlülüklerin gerektirdiği süre boyunca saklanır.
+- Uyuşmazlık, resmî makam talebi veya ihlal incelemesiyle ilgili kayıtlar: ilgili gerekçenin gerektirdiği ölçü ve süreyle.
 
-[**Hesap silme talebi gönder →**](mailto:support@uniqampus.org?subject=Hesap%20Silme%20Talebi&body=Hesab%C4%B1ma%20kay%C4%B1tl%C4%B1%20e-posta%20adresi%3A%20)
+## 4. Başvurular ve yanıt süresi
 
-Güvenlik amacıyla, talebi yapan kişinin hesap sahibi olduğunu doğrulamak için kimlik/doğrulama
-adımları uygulanabilir. Talebiniz **en geç 30 gün içinde** sonuçlandırılır.
+Hesap silme talebi için destek kanalımızı da kullanabilirsiniz. KVKK kapsamındaki hak başvuruları, kimlik doğrulaması ve gerekli inceleme sonrasında en geç 30 gün içinde cevaplandırılır. Yasal olarak tutulması zorunlu verinin silinmesinin reddi halinde gerekçesi açıklanır; zorunlu süre sona erince silme/imha süreci işletilir.
 
-## 3. Silinen veriler
+## 5. İletişim
 
-Hesap silme işlemi tamamlandığında aşağıdaki veriler **silinir veya anonim hale getirilir**:
-
-- Hesap ve profil bilgileri (kullanıcı adı, e-posta, üniversite/bölüm/sınıf, profil fotoğrafı),
-- Yüklediğiniz öğrenci doğrulama belgesi,
-- Oluşturduğunuz içerikler (ilanlar, forum gönderileri/yanıtları, hoca değerlendirmeleri,
-  kayıp-buluntu, aktivite/ulaşım ilanları, anonim duvar içerikleri),
-- Özel mesajlar ve mesaj ekleri,
-- Beğeni, oy, favori ve etkileşim kayıtları,
-- Push bildirim token'ları.
-
-## 4. Saklanması gerekebilecek veriler
-
-Aşağıdaki hallerde bazı kayıtlar, yürürlükteki mevzuata uygun ve **sınırlı süreyle** saklanabilir:
-
-- Yasal saklama yükümlülükleri (ör. mevzuat gereği tutulması zorunlu kayıtlar),
-- Güvenlik incelemeleri ve kötüye kullanımın önlenmesi (güvenlik/log kayıtları),
-- Uyuşmazlık çözümü ve resmî makam talepleri,
-- Yedeklerde geçici olarak kalan teknik veriler (rutin yedek döngüsü içinde temizlenir).
-
-Bu kayıtlar yalnızca ilgili amaç için tutulur; amaç ortadan kalktığında silinir veya anonimleştirilir.
-
-## 5. Süreler
-
-Hesap silme talebinden sonra hesabınız makul süre içinde kapatılır. Yanlışlıkla yapılan talepleri
-geri alabilmeniz için kısa bir **geri alma süresi** tanınabilir; bu sürenin sonunda kişisel verileriniz
-kalıcı olarak silinir, yok edilir veya anonim hale getirilir.
-
-## İlgili belgeler
-
-- [Gizlilik Politikası](https://uniqampus.org/privacy)
-- [KVKK Aydınlatma Metni](https://uniqampus.org/kvkk)
-- [Kullanım Koşulları](https://uniqampus.org/terms)
-
-Sorularınız için: **support@uniqampus.org**
+Veri sorumlusu: Ahmet Hakan AYDIN. Adres: Alikahya Fatih Mahallesi, İsmail Dede Efendi Caddesi No: 13, İzmit / Kocaeli, Türkiye. E-posta: support@uniqampus.org.

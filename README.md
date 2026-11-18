@@ -81,6 +81,11 @@ kullanıcı linke tıklar → **uygulama kuruluysa doğrudan açılır** (davet 
 | Kullanım Koşulları | `https://uniqampus.org/terms` |
 | KVKK Aydınlatma Metni | `https://uniqampus.org/kvkk` |
 | Hesap & Veri Silme | `https://uniqampus.org/account-deletion` |
+| Ücretsiz Hediye Kampanyaları Genel Koşulları | `https://uniqampus.org/kampanya-kosullari` |
 | Destek | `https://uniqampus.org/support` |
 
 Tüm bağlantılar ve e‑postalar **uniqampus.org** alan adına göre normalize edilecektir.
+
+KVKK, Gizlilik, Kullanım Koşulları, Hesap ve Veri Silme ve Kampanya Koşulları sayfaları **avukat onaylı metnin
+(sürüm 2026.11.18, yürürlük 18 Kasım 2026) birebir** kopyasıdır; metinde değişiklik yalnız yeni hukuki onayla yapılır.
+Aynı metinler uygulamada da vardır (`src/constants/legal.ts`) — biri değişirse diğeri de güncellenmeli.

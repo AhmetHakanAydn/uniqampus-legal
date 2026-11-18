@@ -4,98 +4,74 @@ layout: default
 permalink: /kvkk/
 ---
 
-# UniQampüs — KVKK Aydınlatma Metni
+# UniQampus KVKK Aydınlatma Metni
 
-**Yürürlük Tarihi:** 01.06.2026
-**Son Güncelleme:** 01.06.2026
-**Sürüm:** 1.0
+**Yürürlük tarihi:** 18 Kasım 2026 · **Metin sürümü:** 2026.11.18
 
-> Not: Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) m.10 kapsamındaki
-> aydınlatma yükümlülüğü için hazırlanmıştır. Yayın öncesi avukat/uzman onayı alınması önerilir.
-> Köşeli parantezli alanlar doldurulmalıdır.
+## 1. Veri sorumlusu ve iletişim
 
-## 1. Veri Sorumlusunun Kimliği
+6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kişisel verileriniz, UniQampus uygulamasını işleten veri sorumlusu Ahmet Hakan AYDIN tarafından işlenmektedir. Yazışma ve başvuru adresi: Alikahya Fatih Mahallesi, İsmail Dede Efendi Caddesi No: 13, İzmit / Kocaeli, Türkiye. E-posta: support@uniqampus.org. UniQampus, hizmetin adıdır.
 
-KVKK uyarınca kişisel verileriniz, veri sorumlusu sıfatıyla aşağıdaki kişi tarafından işlenmektedir.
-Resmî şirket kuruluşu tamamlanana kadar uygulama, “UniQampüs” adı altında faaliyet gösteren
-gerçek kişi tarafından işletilmektedir.
+## 2. Toplanan veri kategorileri ve kaynakları
 
-- **Veri Sorumlusu:** Ahmet Hakan Aydın (“UniQampüs”)
-- **Adres:** Bahçelievler Mahallesi 3004 Sokak Kat 1, Isparta / Merkez
-- **E-posta (KVKK başvuru ve iletişim):** support@uniqampus.org
+- Hesap ve kimlik doğrulama: kullanıcı adı, e-posta adresi, cep telefonu numarası, parola özeti, hesabın açılış/doğrulama bilgileri, oturum ve metin sürümü kayıtları.
+- Öğrenim ve profil: üniversite, fakülte, bölüm, sınıf, profil fotoğrafı ve paylaşmayı seçtiğiniz bilgiler.
+- Kullanıcı içerikleri: Goygoy, Anlık, ilan, yorum, hoca değerlendirmesi, forum ve etkinlik paylaşımları, etkileşimler, DM ve bunların fotoğraf/video/ses ekleri.
+- İsteğe bağlı öğrencilik doğrulaması: T.C. kimlik numarası, öğrenci belgesi veya öğrenci kimliği; hediye hakkı için ayrıca e-Devlet barkodlu öğrenci belgesi ve manuel doğrulama sonucu. Belge ve T.C. numarası içeriği herkese açık değildir.
+- Hediye ve kampanya: uygunluk, hediye kodu, tarih, stok, kullanım, kampanya katılımı ve mükerrer kullanımın önlenmesine ilişkin anahtarlı kimlik özeti.
+- İletişim ve destek: ticari elektronik ileti izin/ret durumu, zaman damgası, destek ve şikâyet başvuruları.
+- Konum ve arama: ilgili özelliği kullandığınızda izin verdiğiniz konum, aradığınız yer ifadesi ve paylaşımınıza eklemeyi tercih ettiğiniz konum. Uygulama, konumu arka planda sürekli takip etmez.
+- Teknik ve güvenlik: IP adresi, cihaz/uygulama özellikleri, bildirim jetonu, oturum, güvenlik olayları, hata ve çökme kayıtları.
 
-## 2. İşlenen Kişisel Veriler
+Verileri ağırlıklı olarak sizden (form, belge, içerik ve cihaz izinleri aracılığıyla), kullanım esnasında otomatik sistemlerden ve destek iletişiminden elde ederiz. Üçüncü kişilerce paylaşılan içeriklerde başka kişilere ait bilgiler bulunabilir; bu paylaşımlar kullanım kurallarına tabidir.
 
-UniQampüs mobil uygulaması, web sitesi ve destek kanalları üzerinden aşağıdaki kişisel veriler işlenir:
+## 3. İşleme amaçları ve hukuki sebepler
 
-- **Kimlik ve hesap verileri:** ad/kullanıcı adı (nickname), kişisel e-posta adresi, şifre (kriptografik
-  olarak hash'lenmiş; düz metin saklanmaz), T.C. kimlik numarası (yalnızca öğrenci doğrulamasının
-  benzersizliği için), üniversite, bölüm, sınıf bilgisi, profil fotoğrafı, hesap oluşturma ve doğrulama bilgileri.
-- **Doğrulama belgesi:** öğrenci kimlik kartı görseli (yalnızca üyelik doğrulaması amacıyla, özel/erişimi
-  kısıtlı depolama alanında işlenir).
-- **Kullanıcı içeriği ve etkileşim:** forum gönderileri ve yanıtları, beğeni/oy, anketler, ilanlar,
-  kayıp-buluntu paylaşımları, aktivite/ulaşım ilanları, hoca değerlendirmeleri, anonim duvar (Goygoy)
-  içerikleri, mesajlar ve mesaj ekleri.
-- **Otomatik toplanan teknik veriler:** cihaz tipi, işletim sistemi/uygulama sürümü, IP adresi, cihaz
-  tanımlayıcıları, oturum kayıtları, çökme/hata raporları, güvenlik logları, push bildirim token'ı,
-  anonimleştirilmiş kullanım istatistikleri.
-- **İzin tabanlı veriler:** kamera, galeri/fotoğraflar, mikrofon ve bildirim erişimi — yalnızca ilgili
-  özelliğin kullanılmak istenmesi ve cihaz izninin verilmesi halinde.
+| İşleme | Amaç | KVKK kapsamındaki hukuki sebep |
+| --- | --- | --- |
+| Hesap/e-posta OTP | Hesap açma, erişim ve şifre kurtarma | m.5/2(c) sözleşme; gerekli güvenlikte m.5/2(f) |
+| Profil, paylaşım, mesaj | Kullanıcının seçtiği hizmeti sunma | m.5/2(c) sözleşme; içerik yayınına göre sınırlı işleme |
+| Güvenlik ve istismar | Hesap koruma, spam/dolandırıcılığı önleme | m.5/2(f) meşru menfaat; somut yükümlülükte m.5/2(ç) |
+| Öğrencilik/doğrulama | İsteğe bağlı doğrulama, mükerrer başvuruyu önleme | m.5/2(c) veya m.5/2(f), işleme faaliyetine göre; açık rıza gereken durumlarda m.5/1 |
+| Hediye kampanyası | Hak kullanımını ve mükerrer kazanımı yönetme | m.5/2(c) (kampanya koşullarının ifası), m.5/2(f) (ölçülü suistimal önleme) ve koşullarına göre m.5/2(e) |
+| Şikâyet ve resmî talepler | Hak ihlali yönetimi, yükümlülüklerin yerine getirilmesi | m.5/2(ç)/(e)/(f) koşula göre |
+| Hata/çökme | Teknik sorun, güvenlik ve kalite | m.5/2(f) (güvenlik ve teknik hizmetin sürdürülmesi) |
+| İsteğe bağlı pazarlama | Kampanya ve promosyon e-postası | m.5/1 (açık rıza gerektiren işlemler) ve 6563 sayılı Kanun kapsamında ticari ileti onayı |
 
-## 3. Kişisel Verilerin İşlenme Amaçları
+Kişisel veriler, her işleme faaliyeti için geçerli olan hukuki sebebe dayanılarak ve amaçla sınırlı olarak işlenir. İsteğe bağlı pazarlama iletişimi için üyelikten bağımsız ve geri alınabilir bir tercih sunulur.
 
-- Hesap oluşturma, kimlik doğrulama, üniversite topluluğu doğrulaması ve profil yönetimi,
-- Forum, ilan, mesajlaşma, etkinlik, ulaşım, marketplace, kayıp-buluntu, hoca değerlendirme ve
-  esnaf rehberi gibi özelliklerin sunulması,
-- Uygulama güvenliğinin sağlanması; sahte hesap, spam, dolandırıcılık, taciz ve hukuka aykırı
-  içeriğin önlenmesi,
-- Destek taleplerinin karşılanması ve hizmet kalitesinin iyileştirilmesi,
-- Çökme/hata analizleri ile performans ve stabilitenin artırılması,
-- Yasal yükümlülüklerin yerine getirilmesi ve yetkili kamu kurumlarından gelen taleplerin değerlendirilmesi.
+## 4. Öğrenci belgesi ve T.C. kimlik numarasının korunması
 
-## 4. İşlemenin Hukuki Sebepleri (KVKK m.5)
+Öğrencilik doğrulamasını başlatmanız halinde T.C. kimlik numaranız ve sunduğunuz belge yalnız yetkili kişilerce erişilebilen korumalı süreçlerde incelenir. Doğrulama tamamlandıktan sonra düz T.C. kimlik numarası silinir; bir kişinin farklı hesaplarla tekrar doğrulanmasını veya aynı kampanyadan birden çok kez yararlanmasını önlemek amacıyla anahtarlı bir kimlik özeti saklanabilir. Bu özet, kişiyi yeniden ilişkilendirmeye elverişli olabileceği için kişisel veri güvenliği önlemlerine tabidir. e-Devlet barkodlu öğrenci belgeleri yetkili personelce resmî doğrulama hizmetinden kontrol edilir; gerekli doğrulama sonucu ve işlem tarihi kaydedilir.
 
-| İşleme Faaliyeti | Hukuki Sebep |
-|---|---|
-| Hesap oluşturma ve üyelik hizmetleri | m.5/2-c — Sözleşmenin kurulması veya ifası |
-| Güvenlik, kötüye kullanımın önlenmesi, log kayıtları | m.5/2-f — Meşru menfaat; m.5/2-ç — Hukuki yükümlülük |
-| Bildirimler ve opsiyonel izinlere bağlı işlemler | m.5/1 — Açık rıza |
-| Öğrenci doğrulaması (kimlik belgesi, T.C. kimlik no) | m.5/1 — Açık rıza (doğrulamayı başlatan kullanıcı tarafından) |
-| Yasal başvuru ve resmî taleplerin yanıtlanması | m.5/2-ç — Hukuki yükümlülük |
-| Destek süreçleri | m.5/2-f — Meşru menfaat veya talebin niteliğine göre ilgili sebep |
+## 5. Kişisel verilerin aktarılabileceği alıcı grupları
 
-## 5. Kişisel Verilerin Aktarımı
+Verilerinizin ilgili kısmı; teknik barındırma ve bağlantı güvenliği sağlayıcılarına, medya depolama/CDN hizmetine, hesap e-postası gönderim sağlayıcısına, bildirim iletim zincirine, harita/yer arama sağlayıcılarına, hata takip hizmetine, hediyenin kullanıldığı anlaşmalı işletmeye ve kanunen yetkili mercilere işin gerektirdiği sınırlar içinde aktarılabilir.
 
-Kişisel verileriniz, hizmetin sunulması ve güvenliğin sağlanması amacıyla aşağıdaki hizmet
-sağlayıcılarla sınırlı olarak paylaşılabilir:
+Kullanılan hizmet sağlayıcılar arasında Cloudflare (bağlantı güvenliği, medya ve yedekleme), Resend (e-posta gönderimi), Expo, Apple ve Google (mobil bildirim ve dağıtım), Sentry (hata ve çökme analizi) ve komoot/Photon (yer araması) bulunur. Ana uygulama sunucuları ve veritabanı Türkiye’dedir; hizmetlerin niteliğine göre bazı kişisel veriler yurt dışındaki sağlayıcılara veya yurt dışından erişilebilen hizmetlere aktarılabilir.
 
-- **Supabase** (bulut veritabanı, kimlik doğrulama, depolama) — hesap, profil, içerik, mesaj ve teknik veriler,
-- **Cloudflare** (güvenlik / depolama-CDN) — IP, trafik ve güvenlik verileri; medya dosyaları,
-- **Sentry** (hata izleme) — çökme raporları, cihaz/uygulama bilgisi,
-- **Expo / Apple / Google** (bildirim altyapısı, mağaza dağıtımı) — push token, cihaz bildirimi, dağıtım verileri,
-- **Yetkili kamu kurum ve kuruluşları** — talep konusuyla sınırlı kişisel veriler.
+Yurt dışına kişisel veri aktarımında KVKK’nın 9. maddesindeki şartlar ve ilgili veri aktarımına uygulanabilir hukuki mekanizmalar esas alınır. Aktarımın kapsamı ve bu konudaki haklarınız hakkında veri sorumlusuna başvurabilirsiniz.
 
-**Yurt dışına aktarım:** Bazı altyapı, bildirim, hata raporlama ve güvenlik hizmetleri yurt dışında
-yerleşik sağlayıcılarca sunulduğundan kişisel veriler, KVKK ve ilgili Kurul kararlarına uygun hukuki
-sebepler ve gerekli güvenlik önlemleri kapsamında yurt dışına aktarılabilir.
+Hediye kullanım işlemleri için iş ortağı işletmelerle yalnızca hediyenin doğrulanması ve kullanılması bakımından gerekli bilgiler paylaşılır; tüm kimlik ve hesap bilgileriniz işletmelere açılmaz.
 
-## 6. Toplama Yöntemi
+## 6. Konum ve bildirimler
 
-Kişisel verileriniz; mobil uygulama, web sitesi ve destek kanalları aracılığıyla, elektronik ortamda,
-yukarıdaki hukuki sebeplere dayanılarak otomatik ve kısmen otomatik yöntemlerle toplanır.
+Konum özelliği isteğe bağlıdır. İzin verirseniz cihazınızın konumuna ilgili özellik için erişilir. Yer aramasında konum bilgisi sunucumuzca yaklaşık 11 km düzeyinde yuvarlanarak arama ifadesiyle birlikte Photon hizmetine iletilebilir. Paylaşıma bilerek eklediğiniz konum, içeriğin görünürlük koşullarına göre diğer kullanıcılarca görülebilir. Bildirim iznini cihaz ayarlarından değiştirebilirsiniz.
 
-## 7. İlgili Kişinin Hakları (KVKK m.11)
+## 7. Saklama ve silme
 
-Kişisel veri sahibi olarak; verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işleme amacını
-ve amaca uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/dışında aktarıldığı üçüncü kişileri bilme,
-eksik/yanlış işlenmişse düzeltilmesini, KVKK'da öngörülen şartlarda silinmesini/yok edilmesini isteme,
-düzeltme/silme işlemlerinin aktarılan üçüncü kişilere bildirilmesini isteme, otomatik sistemlerle analiz
-sonucu aleyhinize bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız
-halinde tazminat talep etme haklarına sahipsiniz.
+Hesabınız aktif kaldığı sürece hizmet için gerekli hesap, profil ve içerik bilgileri saklanır. Hesabınızı sildiğinizde canlı sistemdeki hesabınız ve ilgili içerikler silme prosedürü kapsamında kaldırılır. Yasal yükümlülüklerin yerine getirilmesi, hukuki taleplerin değerlendirilmesi, güvenlik ve mükerrer kampanya kullanımının önlenmesi için gerekli sınırlı kayıtlar ilgili amaç için gereken süre boyunca ayrıca saklanabilir. Yedeklerde bulunan veriler ise yedeklerin imha döngüsüne tabidir.
 
-## 8. Başvuru Yöntemi
+Saklama süreleri veri türüne ve işleme amacına göre belirlenir. Hesap ve profil bilgileri hesabınız açık olduğu sürece; yeni şifreli operasyonel yedekler olağan olarak en çok 30 gün; ticari elektronik ileti onay ve ret kayıtları ilgili mevzuatta öngörülen ispat süreleri boyunca saklanır. Kampanya katılım, destek, güvenlik, trafik ve hukuki uyuşmazlık kayıtları; ilgili faaliyet için gerekli ve uygulanabilir mevzuatın öngördüğü süre boyunca tutulur. Saklama gereği sona eren kişisel veriler mevzuata uygun biçimde silinir, yok edilir veya anonimleştirilir.
 
-Yukarıdaki haklarınıza ilişkin taleplerinizi **support@uniqampus.org** adresine iletebilirsiniz.
-Başvurularınız KVKK uyarınca en geç **30 gün** içinde sonuçlandırılır. Kimliğinizin doğrulanması
-amacıyla ek bilgi talep edilebilir. Başvurunuza süresinde yanıt verilmemesi veya yanıtı yetersiz
-bulmanız halinde Kişisel Verileri Koruma Kurumu'na şikâyette bulunma hakkınız saklıdır.
+Önceki teknik altyapıya ait arşiv ve yedek kopyaları, mevcut operasyonel yedekleme döngüsünden ayrı tutulabilir. Bu veriler için erişim sınırlandırılır ve saklama gerekçesi sona erdiğinde güvenli imha işlemleri uygulanır. Hesap silinmesi, yasal nedenlerle ayrıca tutulması gereken her kaydın anında ortadan kalktığı anlamına gelmez.
+
+## 8. İlgili kişinin hakları ve başvuru
+
+KVKK m.11 uyarınca kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi isteme, işleme amacını, aktarıldığı alıcıları öğrenme; düzeltme, şartları varsa silinme/yok edilme ve bildirim isteme; yalnız otomatik işleme dayalı aleyhe sonuçlara itiraz ve kanuna aykırı işleme kaynaklı zararın giderilmesini talep etme haklarına sahipsiniz.
+
+KVKK kapsamındaki taleplerinizi support@uniqampus.org adresine, Alikahya Fatih Mahallesi, İsmail Dede Efendi Caddesi No: 13, İzmit / Kocaeli, Türkiye adresine yazılı olarak veya mevzuatta öngörülen diğer yöntemlerle iletebilirsiniz. Gerekli hallerde kimliğinizin doğrulanması istenebilir. Başvurular en geç 30 gün içinde sonuçlandırılır; mevzuatta öngörülen istisnalar dışında ücretsizdir. KVKK kapsamındaki şikâyet hakkınız saklıdır.
+
+## 9. Açık rıza ve bilgilendirme ayrımı
+
+KVKK Aydınlatma Metni bilgi vermek amacıyla sunulur ve tek başına açık rıza yerine geçmez. Üyelik oluşturmanız tüm kişisel veri işleme faaliyetleri için genel açık rıza verdiğiniz anlamına gelmez. İsteğe bağlı ticari elektronik ileti veya açık rıza gerektiren başka işlemler için ayrıca, önceden işaretlenmemiş bir tercih sunulur.
